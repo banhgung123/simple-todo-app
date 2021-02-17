@@ -3,6 +3,7 @@ import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 import todoApi from 'api/todoApi';
 import { Box } from '@material-ui/core';
+import { v4 as uuidv4 } from 'uuid';
 
 function Todo(props) {
     const [todos, setTodos] = useState([]);
@@ -37,7 +38,7 @@ function Todo(props) {
         };
 
         const response = await todoApi.add(newTodo);
-        const newTodos = [...todos, response];
+        const newTodos = [...todos, { ...response, id: uuidv4() }];
         setTodos(newTodos);
     };
 
