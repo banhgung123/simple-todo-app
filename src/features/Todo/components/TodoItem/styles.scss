@@ -1,0 +1,28 @@
+$--main-color: #678c89;
+
+.todo-item {
+    list-style-type: none;
+    padding: 1.5em 2em;
+    border-top: 1px solid $--main-color;
+
+    & span:nth-child(2) {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 80%;
+        height: 18px;
+        display: inline-block;
+    }
+}
+
+.completed {
+    font-style: italic;
+    color: #c5e2d2;
+    text-decoration: line-through;
+}
+
+.btn-style {
+    cursor: pointer;
+    float: right;
+    margin-top: 0.2rem;
+}

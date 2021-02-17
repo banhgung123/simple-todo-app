@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from 'components/Header';
+import Footer from 'components/Footer';
+import Loading from 'components/Loading';
+import React, { Suspense } from 'react';
+import './App.scss';
+import { Box } from '@material-ui/core';
+
+// Lazy load
+const Todo = React.lazy(() => import('features/Todo'));
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Box className="container">
+            <Header />
+            <Suspense
+                fallback={
+                    <div className="App">
+                        <Loading />
+                    </div>
+                }
+            >
+                <Todo />
+            </Suspense>
+            <Footer />
+        </Box>
+    );
 }
 
 export default App;

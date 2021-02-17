@@ -1,0 +1,13 @@
+$--main-color: #678c89;
+
+.header-container {
+    background-color: $--main-color;
+    color: #fff;
+    padding: 10px 15px;
+
+    &-title {
+        font-size: 25px;
+        line-height: 1.447em;
+        margin: 0;
+    }
+}

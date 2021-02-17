@@ -1,0 +1,21 @@
+$--main-color: #678c89;
+
+.todoform {
+    display: flex;
+    width: 100%;
+
+    &-input {
+        flex: 7;
+    }
+
+    &-submit {
+        flex: 3;
+        background: $--main-color;
+        color: #fff;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-weight: 600;
+        outline: none;
+        border-radius: 0;
+    }
+}

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin-top: 2rem;
 }
 
 .App-logo {
@@ -36,3 +37,14 @@
     transform: rotate(360deg);
   }
 }
+
+$--main-color: #678c89;
+
+.container {
+  max-width: 42em;
+  margin: 0 auto;
+  border: 1px solid $--main-color;
+}
+
+
+
