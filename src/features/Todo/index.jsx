@@ -38,7 +38,7 @@ function Todo(props) {
         };
 
         const response = await todoApi.add(newTodo);
-        const newTodos = [...todos, { ...response, id: uuidv4() }];
+        const newTodos = [{ ...response, id: uuidv4() }, ...todos, ];
         setTodos(newTodos);
     };
 
