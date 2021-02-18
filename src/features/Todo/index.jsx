@@ -44,7 +44,12 @@ function Todo(props) {
 
     return (
         <Box>
-            <TodoForm addTodo={addTodo}/>
+            <Box
+                position="sticky"
+                top="0"
+            >
+                <TodoForm addTodo={addTodo} />
+            </Box>
             <TodoList
                 todos={todos}
                 handleChange={handleCheckboxChange}
